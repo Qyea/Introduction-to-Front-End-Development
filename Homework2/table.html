@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table element with random data</title>
+    <style>
+        body * {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Random Data Table</caption>
+        <thead>
+          <tr>
+            <th scope="col">Column 1</th>
+            <th scope="col">Column 2</th>
+            <th scope="col" colspan="2">Column 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="2">Row 1</th>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+          </tr>
+          <tr>
+            <td>Cell 4</td>
+            <td colspan="2">Cell 5 with hello</td>
+          </tr>
+          <tr>
+            <th scope="row">Row 2</th>
+            <td>Cell 6</td>
+            <td>Cell 7</td>
+            <td>Cell 8</td>
+          </tr>
+          <tr>
+            <th scope="row">Row 3</th>
+            <td>Cell 9</td>
+            <td>Cell 10</td>
+            <td>Cell 11</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Just think that footer content goes here</td>
+          </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
