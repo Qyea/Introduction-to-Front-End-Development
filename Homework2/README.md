@@ -1,6 +1,7 @@
 # Table element with random data
 
 **Create a table element with random data with 4 rows and at least 4 columns.**
+
 **Requirements**
 1. A table with <thead>, <tbody>, and <tfoot> on the top level
 2. At least one colspan and rowspan attributes should be used
