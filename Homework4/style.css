@@ -1,0 +1,54 @@
+input {
+    border: none;
+    border-radius: 2px;
+}
+
+.body-wrapper{
+    margin: 30px 40px;
+}
+
+/* I decided to create a general class for all inputs 
+       to align them without duplication of the code */ 
+.input {
+    display: flex;
+    justify-content:flex-start;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+/* Modes start*/ 
+.input-primary input {
+    /* Primary color styles */
+    outline: 2px solid #d195ff;
+  
+    &:focus-visible {
+      outline: 2px solid purple;
+    }
+  }
+  
+  .input-secondary input {
+    /* Secondary color styles */
+    outline: 2px solid lightpink;
+  
+    &:focus-visible {
+      outline: 2px solid palevioletred;
+    }
+  }
+/* End of modes */ 
+
+/* Sizes start*/
+.input-small input{
+    padding: 4px;
+    font-size: 12px;
+}
+
+.input-medium input{
+    padding: 8px;
+    font-size: 20px;
+}
+
+.input-large input{
+    padding: 12px;
+    font-size: 28px;
+}
+/*End of sizes*/
