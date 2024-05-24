@@ -1,134 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gruppo&family=Gudea:ital,wght@0,400;0,700;1,400&family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Portfolio</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact form</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  </head>
+  <body>
+    <div >
+        <div class=" header wrapper">
+            <header >
+                <div class="header-items">
+                  <div class="logo">Programmer</div>
+                  <nav>
+                    <ul class="cv-navigation">
+                      <li>
+                        <a class="nav-link" href="#profile">Profile</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#skills">Skills</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#projects">Projects</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Languages</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Hobbies</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#contact">Contacts</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </header>
+            <section class="hero">
+                <div class="hero-wrapper">
+                    <div class="name">
+                        Anastasia Krech
+                    </div>
+                    <div class="about">
+                        Allow me to introduce myself
+                    </div>
+                </div>
+            </section>
+        </div> 
+    
     <main role="main">
-        <section aria-label="hero">
-            <h1>Hey, my name is Anastasia and I am a web developer</h1>
-            <a href="#contact">Contact me</a>
-        </section>
-        <section aria-label="about" id="about">
-              <h2>About</h2>
-              <img src="./assets/profile-photo.jpg" alt="portfile-photo" width="400px"/>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem numquam aperiam similique, 
-                ex minus magnam quos cum ullam? Dicta non iste commodi itaque reiciendis asperiores qui sequi, 
-                similique totam dolore! Illo vitae in, error a, sapiente asperiores aut ipsum pariatur, 
-                quibusdam ea nostrum doloremque officiis dolorem nulla nam repellendus numquam autem minus
-                 necessitatibus. Harum veniam deleniti expedita, unde et soluta ipsam vel quo saepe voluptatum
-                  rerum suscipit libero vitae quam. Officia, fugit vel. Culpa distinctio atque ipsum, 
-                  voluptates aliquid aut iure laborum eos ad architecto a incidunt quam quisquam beatae 
-                  optio repudiandae ratione possimus! Exercitationem architecto quia sequi quos! Aperiam?</p>
-        </section>
-        <section aria-label="services" id="services">
-            <h2>Services</h2>
-            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Fuga magni veritatis quo dicta voluptas illum provident enim?
-                Aut quidem est voluptas enim, ipsa dicta recusandae blanditiis 
-                laudantium accusantium impedit, possimus nihil. Dolores magni 
-                sunt sit unde atque odit ut hic iusto assumenda numquam voluptas, 
-                modi reiciendis porro nobis quos esse provident qui in debitis. 
-                Perspiciatis.
-            </h3>
-            <div>
-                <article>
-                    <img src="./assets/browser.png" alt="landing-page" width="50px"/>
-                    <h4>Landing Page</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati consequatur quas optio.</p>
-                </article>
-                <article>
-                    <img src="./assets/portfolio.png" alt="personal-block" width="50px"/>
-                    <h4>Personal Block</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quos consequuntur quae?</p>
-                </article>
-                <article>
-                    <img src="./assets/web-design.png" alt="web-desigh" width="50px"/>
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim labore vel est.</p>
-                </article>
+        <section aria-label="profile" id="profile">
+          <div class="block-wrapper">
+            <div class="running_text_container">
+                <div class="running_text">
+                    <div class="block-title"}>
+                    Profile
+                    </div>
+                </div>
             </div>
+        </div >
+        <div class="block-info">
+          <h2 class="title">Profile</h2>
+          <div class="info-block"> 
+              <div class="block-text">
+                  I am a student of the Belarusian State University, Faculty of Applied Mathematics and Computer Science. In two years of study, I gained basic knowledge of both low-level languages, such as assembler, and high-level programming languages: C++, Java. 
+              </div>
+              <img class="image-circle"src="./assets/profile-photo.jpg" alt="portfile-photo"/>
+          </div>
+          <div class="info-block">
+            <div class="languages">
+              <div class="centered-text">I worked with the following languages</div>
+              <ul class="list">
+                <li>JavaScript</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+            <div class="block-text">
+              My experience includes writing client-server applications, desktop applications, which included working with databases and creating user interfaces. I also have experience in solving basic algorithmic problems.
+            </div>
+          </div>
         </section>
-        <section aria-label="projects" id="projects">
-            <h2>Projects</h2>
-            <article>
-                <img src="./assets/Ozi_logo.png" alt="project-Ozi" width="100"/>
-                <h3>Ozi!</h3>
-                <h4>My own social media</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis temporibus unde repellat aperiam 
-                    aliquid odit quam quisquam quod exercitationem dolorem perferendis reprehenderit ab recusandae, 
-                    dignissimos doloremque beatae totam neque, libero placeat! Quos provident quis expedita, culpa 
-                    molestiae autem? Molestiae ad in corrupti culpa non natus voluptatem sit deserunt corporis quis?
-                </p>
-                <a href="./pages/project_1.html" target="_blank">Read more</a>
-            </article>
-            <article>
-                <img src="./assets/Vision.png" alt="project-Computer-Vision" width="100"/>
-                <h3>Computer Vision</h3>
-                <h4>Some tasks from my course</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis temporibus unde repellat aperiam 
-                    aliquid odit quam quisquam quod exercitationem dolorem perferendis reprehenderit ab recusandae, 
-                    dignissimos doloremque beatae totam neque, libero placeat! Quos provident quis expedita, culpa 
-                    molestiae autem? Molestiae ad in corrupti culpa non natus voluptatem sit deserunt corporis quis?
-                </p>
-                <a href="./pages/project_2.html" target="_blank">Read more</a>
-            </article>
-            <article>
-                <img src="./assets/Travel.png" alt="project-Travel-Page" width="100"/>
-                <h3>Travel Page</h3>
-                <h4>My own summer practice</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis temporibus unde repellat aperiam 
-                    aliquid odit quam quisquam quod exercitationem dolorem perferendis reprehenderit ab recusandae, 
-                    dignissimos doloremque beatae totam neque, libero placeat! Quos provident quis expedita, culpa 
-                    molestiae autem? Molestiae ad in corrupti culpa non natus voluptatem sit deserunt corporis quis?
-                </p>
-                <a href="./pages/project_3.html" target="_blank">Read more</a>
-            </article>
-        </section>
-        <section aria-label="contact" id="contact">
-            <h2>Contact form</h2>
-            <form action="https://formsubmit.co/kreshess@mail.ru" method="POST">
-                <label for="name">Name</label>
-                <input id="name" name="Name" placeholder="ex. Alex" required/>
-                <label for="email">Email</label>
-                <input 
-                    id="email" 
-                    type="email" 
-                    name="email" 
-                    placeholder="alex@email.com" 
-                    required/>
-                <label for="message">Message</label>
-                <textarea 
-                    id="message"
-                    name="message"
-                    placeholder="Enter your message"
-                    required
-                    minlength="10"
-                    maxlength="200"
-                ></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+      <section aria-label="skills" id="skills">
+        <div class="block-wrapper">
+          <div class="running_text_container">
+              <div class="running_text">
+                  <div class="block-title"}>
+                  Skills
+                  </div>
+              </div>
+          </div>
+        </div >
+        <div class="block-info">
+          <h2 class="title">Skills</h2>
+          <div class="cards">
+            <div class="card">
+              <div class="card-language">JavaScript</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-language">C++</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 65%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-language" >Java</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-language" >Python</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 65%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-language">SQL</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <h3>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga magni
+          veritatis quo dicta voluptas illum provident enim? Aut quidem est
+          voluptas enim, ipsa dicta recusandae blanditiis laudantium accusantium
+          impedit, possimus nihil. Dolores magni sunt sit unde atque odit ut hic
+          iusto assumenda numquam voluptas, modi reiciendis porro nobis quos
+          esse provident qui in debitis. Perspiciatis.
+        </h3>
+        <div>
+          <article>
+            <img src="./assets/browser.png" alt="landing-page" width="50px" />
+            <h4>Landing Page</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Obcaecati consequatur quas optio.
+            </p>
+          </article>
+          <article>
+            <img
+              src="./assets/portfolio.png"
+              alt="personal-block"
+              width="50px"
+            />
+            <h4>Personal Block</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In quos
+              consequuntur quae?
+            </p>
+          </article>
+          <article>
+            <img src="./assets/web-design.png" alt="web-desigh" width="50px" />
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
+              labore vel est.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section aria-label="projects" id="projects">
+        <h2>Projects</h2>
+        <article>
+          <img src="./assets/Ozi_logo.png" alt="project-Ozi" width="100" />
+          <h3>Ozi!</h3>
+          <h4>My own social media</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+            temporibus unde repellat aperiam aliquid odit quam quisquam quod
+            exercitationem dolorem perferendis reprehenderit ab recusandae,
+            dignissimos doloremque beatae totam neque, libero placeat! Quos
+            provident quis expedita, culpa molestiae autem? Molestiae ad in
+            corrupti culpa non natus voluptatem sit deserunt corporis quis?
+          </p>
+          <a href="./pages/project_1.html" target="_blank">Read more</a>
+        </article>
+        <article>
+          <img
+            src="./assets/Vision.png"
+            alt="project-Computer-Vision"
+            width="100"
+          />
+          <h3>Computer Vision</h3>
+          <h4>Some tasks from my course</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+            temporibus unde repellat aperiam aliquid odit quam quisquam quod
+            exercitationem dolorem perferendis reprehenderit ab recusandae,
+            dignissimos doloremque beatae totam neque, libero placeat! Quos
+            provident quis expedita, culpa molestiae autem? Molestiae ad in
+            corrupti culpa non natus voluptatem sit deserunt corporis quis?
+          </p>
+          <a href="./pages/project_2.html" target="_blank">Read more</a>
+        </article>
+        <article>
+          <img
+            src="./assets/Travel.png"
+            alt="project-Travel-Page"
+            width="100"
+          />
+          <h3>Travel Page</h3>
+          <h4>My own summer practice</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+            temporibus unde repellat aperiam aliquid odit quam quisquam quod
+            exercitationem dolorem perferendis reprehenderit ab recusandae,
+            dignissimos doloremque beatae totam neque, libero placeat! Quos
+            provident quis expedita, culpa molestiae autem? Molestiae ad in
+            corrupti culpa non natus voluptatem sit deserunt corporis quis?
+          </p>
+          <a href="./pages/project_3.html" target="_blank">Read more</a>
+        </article>
+      </section>
+      <section aria-label="contact" id="contact">
+        <h2>Contact form</h2>
+        <form action="https://formsubmit.co/kreshess@mail.ru" method="POST">
+          <label for="name">Name</label>
+          <input id="name" name="Name" placeholder="ex. Alex" required />
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="alex@email.com"
+            required
+          />
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+            required
+            minlength="10"
+            maxlength="200"
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
     </main>
     <!-- Name=value-->
     <!-- 
@@ -140,7 +264,7 @@
         6. contact form
     -->
     <footer>
-        <p>&copy; Anastasia Krech. All (or almost all) rights reserved</p>
+      <p>&copy; Anastasia Krech. All (or almost all) rights reserved</p>
     </footer>
-</body>
+  </body>
 </html>
