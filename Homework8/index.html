@@ -13,17 +13,20 @@
   </head>
   <body>
     <div
-      class="vw-100 vh-100 bg-primary-subtle d-flex justify-content-center align-items-center"
+      class="vw-100 vh-100 bg-primary d-flex justify-content-center align-items-center"
+      style="--bs-bg-opacity: 0.5"
     >
       <div class="bg-primary p-4 rounded w-50">
-        <h1 class="fs-1 text-light">Weather App</h1>
-        <div class="d-flex gap-3">
+        <h1 class="fs-1 text-center text-light">Weather App</h1>
+        <div class="d-flex flex-column align-items-center">
           <input
             id="user-input"
-            class="form-control"
+            class="form-control mb-3"
             placeholder="Enter city..."
           />
-          <button onclick="getWeather()" class="btn btn-light">Search</button>
+          <button onclick="getWeather()" class="btn btn-outline-light">
+            Search
+          </button>
         </div>
       </div>
     </div>
