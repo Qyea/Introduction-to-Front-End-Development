@@ -30,23 +30,26 @@ const getWeather = () => {
   const errorMessageElement = document.getElementById("error-message");
   const errorMessage = "Something went wrong! Try again a little bit later";
 
-  const API_KEY = "197dafdade01d3e785aecdfc076fbc89";
-
   const reset = () => {
     errorMessageElement.textContent = "";
+
     wetherIconElement.setAttribute("src", "");
     wetherIconElement.setAttribute("alt", "");
+
+    weatherHumidityIconElement.setAttribute("src", "");
+    weatherHumidityIconElement.setAttribute("alt", "");
+    weatherHumidityElement.textContent = "";
+
+    weatherWindIconElement.setAttribute("src", "");
+    weatherWindIconElement.setAttribute("alt", "");
+    weatherWindElement.textContent = "";
   };
 
   const displayWeather = (data) => {
     // Temperature
     const temperature = Math.round(data.main.temp - 273.15);
     weatherTempElement.innerHTML = `${temperature}&deg;C`;
-
-    // City
     weatherCityElement.innerHTML = data.name;
-
-    // Description
     weatherDescriptionElement.innerHTML =
       data.weather[0].description[0].toUpperCase() +
       data.weather[0].description.slice(1);
@@ -56,7 +59,7 @@ const getWeather = () => {
       "src",
       "https://static-00.iconduck.com/assets.00/humidity-icon-2048x1675-xxsge5os.png"
     );
-    weatherHumidityIconElement.setAttribute("alt", "Humidity");
+    weatherHumidityIconElement.setAttribute("alt", "Humidity icon");
     weatherHumidityElement.textContent = `${data.main.humidity}`;
 
     // Wind
@@ -64,7 +67,7 @@ const getWeather = () => {
       "src",
       "https://www.svgrepo.com/show/532896/wind.svg"
     );
-    weatherWindIconElement.setAttribute("alt", "Wind");
+    weatherWindIconElement.setAttribute("alt", "Wind icon");
     weatherWindElement.textContent = `${Math.round(data.wind.speed)} m/s`;
   };
 
@@ -75,6 +78,8 @@ const getWeather = () => {
     return;
   }
 
+  const API_KEY = "197dafdade01d3e785aecdfc076fbc89";
+
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
   )
@@ -82,6 +87,7 @@ const getWeather = () => {
     .then((data) => {
       displayWeather(data);
       const iconCode = data.weather[0].icon;
+
       return fetch(`https://openweathermap.org/img/wn/${iconCode}@4x.png`);
     })
     .then(responseSuccess("url"))
