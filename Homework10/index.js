@@ -11,10 +11,23 @@ const responseSuccess = (type) => (response) => {
   }
 };
 
+// As I remember we tried to do something similar in our lesson
+const showElement = (element) => {
+  element.classList.replace("d-none", "d-block");
+};
+
+const hideElement = (element) => {
+  if (element.classList.contains("d-block")) {
+    element.classList.replace("d-block", "d-none");
+  } else if (!element.classList.contains("d-none")) {
+    element.classList.add("d-none");
+  }
+};
+
 const getWeather = () => {
   const userInputElement = document.getElementById("user-input");
   const city = userInputElement.value;
-  const wetherIconElement = document.getElementById("weather-icon");
+  const weatherIconElement = document.getElementById("weather-icon");
   const weatherTempElement = document.getElementById("weather-temp");
   const weatherCityElement = document.getElementById("weather-city");
   const weatherDescriptionElement = document.getElementById(
@@ -31,43 +44,33 @@ const getWeather = () => {
   const errorMessage = "Something went wrong! Try again a little bit later";
 
   const reset = () => {
+    hideElement(weatherIconElement);
+    hideElement(weatherHumidityIconElement);
+    hideElement(weatherWindIconElement);
+
     errorMessageElement.textContent = "";
-
-    wetherIconElement.setAttribute("src", "");
-    wetherIconElement.setAttribute("alt", "");
-
-    weatherHumidityIconElement.setAttribute("src", "");
-    weatherHumidityIconElement.setAttribute("alt", "");
     weatherHumidityElement.textContent = "";
-
-    weatherWindIconElement.setAttribute("src", "");
-    weatherWindIconElement.setAttribute("alt", "");
     weatherWindElement.textContent = "";
+    weatherDescriptionElement.textContent = "";
+    weatherCityElement.textContent = "";
+    weatherTempElement.textContent = "";
   };
 
   const displayWeather = (data) => {
     // Temperature
     const temperature = Math.round(data.main.temp - 273.15);
     weatherTempElement.innerHTML = `${temperature}&deg;C`;
-    weatherCityElement.innerHTML = data.name;
-    weatherDescriptionElement.innerHTML =
+    weatherCityElement.textContent = data.name;
+    weatherDescriptionElement.innerText =
       data.weather[0].description[0].toUpperCase() +
       data.weather[0].description.slice(1);
 
     // Humidity
-    weatherHumidityIconElement.setAttribute(
-      "src",
-      "https://static-00.iconduck.com/assets.00/humidity-icon-2048x1675-xxsge5os.png"
-    );
-    weatherHumidityIconElement.setAttribute("alt", "Humidity icon");
-    weatherHumidityElement.textContent = `${data.main.humidity}`;
+    showElement(weatherHumidityIconElement);
+    weatherHumidityElement.textContent = `${data.main.humidity}%`;
 
     // Wind
-    weatherWindIconElement.setAttribute(
-      "src",
-      "https://www.svgrepo.com/show/532896/wind.svg"
-    );
-    weatherWindIconElement.setAttribute("alt", "Wind icon");
+    showElement(weatherWindIconElement);
     weatherWindElement.textContent = `${Math.round(data.wind.speed)} m/s`;
   };
 
@@ -92,10 +95,10 @@ const getWeather = () => {
     })
     .then(responseSuccess("url"))
     .then((iconUrl) => {
-      wetherIconElement.setAttribute("src", iconUrl);
-      wetherIconElement.setAttribute("alt", "Wether Icon");
+      weatherIconElement.setAttribute("src", iconUrl);
+      weatherIconElement.setAttribute("alt", "Wether Icon");
     })
-    .catch((e) => {
+    .catch((error) => {
       const popupElement = document.createElement("div");
 
       popupElement.setAttribute(
@@ -114,6 +117,6 @@ const getWeather = () => {
       }, 3000);
 
       errorMessageElement.textContent = errorMessage;
-      console.error(e);
+      console.error(error);
     });
 };
